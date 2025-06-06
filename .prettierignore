@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Production
+build/
+dist/
+.next/
+out/
+
+# Environment files
+.env*
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Test coverage
+coverage/
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Generated files
+*.generated.*
