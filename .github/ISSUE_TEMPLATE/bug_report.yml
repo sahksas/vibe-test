@@ -1,0 +1,61 @@
+name: バグ報告
+description: バグの報告を行う
+title: "[バグ] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグを報告していただきありがとうございます。以下の情報を提供してください。
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: バグの概要
+      description: どのような問題が発生していますか？
+      placeholder: 例：ボタンをクリックしてもレスポンスがない
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順
+      description: バグを再現する手順を教えてください
+      placeholder: |
+        1. ページを開く
+        2. ボタンをクリックする
+        3. エラーが表示される
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待される動作
+      description: 本来どのように動作すべきですか？
+    validations:
+      required: false
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 環境
+      description: どの環境で問題が発生していますか？
+      options:
+        - macOS
+        - Windows
+        - Linux
+        - WSL2
+        - その他
+    validations:
+      required: true
+
+  - type: input
+    id: additional-info
+    attributes:
+      label: 追加情報
+      description: その他関連する情報があれば記入してください
+      placeholder: Node.js v20.10.0、Chrome 120など
+    validations:
+      required: false

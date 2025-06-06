@@ -1,0 +1,37 @@
+name: 質問・サポート
+description: 使い方や実装方法について質問する
+title: "[質問] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        質問をする前に、[ドキュメント](https://github.com/annai-inc/vibe-coding/tree/main/doc)を確認してください。
+
+  - type: textarea
+    id: question
+    attributes:
+      label: 質問内容
+      description: 何について知りたいですか？
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: 試したこと
+      description: すでに試した解決方法があれば教えてください
+      placeholder: |
+        - ドキュメントを確認した
+        - 関連するIssueを検索した
+    validations:
+      required: false
+
+  - type: textarea
+    id: code
+    attributes:
+      label: 関連するコード
+      description: 問題に関連するコードがあれば貼り付けてください
+      render: shell
+    validations:
+      required: false
